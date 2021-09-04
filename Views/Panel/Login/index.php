@@ -17,14 +17,24 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
     </head>
     <body>
+
+        <?php
+            if(isset($_SESSION['not_authorized'])):
+        ?>
+                <script>alert('Credenciais incorretas!');</script>
+        <?php
+            endif;
+            unset($_SESSION['not_authorized']);
+        ?>
+
         <div class="div_login_main">
             <div class="div_input_forms">
                 <div class="div_responsive_input">
-                    <form action="#" method="POST">
+                    <form action="../../../Librarys/ValidateLogin.php" method="POST">
                         <img class="img_logotipo" src="https://i.postimg.cc/d3ZW0LjD/gestor-logo-app.png"/>
-                        <input class="class_input" required="" autofocus="" id="input_responsive" placeholder="Informe o CNPJ" type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="14" data-mask="00.000.000/0000-00"/>
-                        <input class="class_input" required="" placeholder="Informe o Nome de Usuário" type="text" />
-                        <input class="class_input" required="" placeholder="Informe a Senha" type="password" />    
+                        <input name="cnpj" class="class_input" required="" autofocus="" id="input_responsive" placeholder="Informe o CNPJ" type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="14" data-mask="00.000.000/0000-00"/>
+                        <input name="username" class="class_input" required="" placeholder="Informe o Nome de Usuário" type="text" />
+                        <input name="password" class="class_input" required="" placeholder="Informe a Senha" type="password" />    
                         <button type="submit"  class="class_input" id="button_login">Acessar</button>
                     </form>
                 </div>
@@ -33,6 +43,8 @@
     </body>
 </html>
 
+<!--
 <script type="text/javascript">
     $("#input_responsive").mask("00.000.000/0000-00");
  </script>
+        -->

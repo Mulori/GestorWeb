@@ -1,7 +1,6 @@
 <?php 
     session_start();
     include('../../Librarys/VerifyLogin.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -11,8 +10,6 @@
         <title>GW | RCR Sistemas</title>
     </head>
     <body>
-        <?php 
-            
-        ?>
+        <h1>Usuario Logado</h1>
     </body>
 </html>

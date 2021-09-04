@@ -5,7 +5,7 @@
         session_start();
     }
 
-    if (!isset($_SESSION['user_cnpj'])) {
+    if (!isset($_SESSION['user_username'])) {
         header('location: '.$WebSiteURL.'/Views/Panel/Login/');
         exit();
     } else {
