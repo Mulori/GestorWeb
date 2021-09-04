@@ -6,7 +6,10 @@
     height: 100%;
     width: 100%;
 
-    background-color: rgb(236, 236, 236);
+    background: linear-gradient(to left, rgb(218, 218, 218), rgb(189, 189, 189));
+    /*background-color: rgb(218, 218, 218);*/
+
+    overflow: auto;
 }
 
 .div_input_forms {
@@ -18,12 +21,14 @@
 
     border-radius: 20px;
 
-    width: 30rem;
-    height: 40rem;
+    width: 30vw;
+    height: 90vh;
 
     background-color: whitesmoke;
 
     box-shadow: 0px 0px 12px 1px rgb(51, 51, 51);
+
+    overflow: auto;
 }
 
 .div_responsive_input {
@@ -44,7 +49,7 @@
     transform: translate(-50%, -50%);
     
     width: 190px;
-    height: 145px;
+    height: 125px;
 }
 
 .class_input { 
@@ -73,5 +78,34 @@
 
 #button_login {
     background-color: #1169ac;
+    margin-top: 40%;
+
+    text-align: center;
     color: white;
+    font-size: 20px;
+    font-family: 'Open Sans';
+
+    border-color: transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    transition: 0.3s;
+}
+
+#button_login:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 12px 1px rgb(51, 51, 51);
+    background-color: #115e99;
+}
+
+.class_input:focus {
+    outline: none;
+    box-shadow: 0px 0px 12px 1px rgb(51, 51, 51);
+}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+    width: 0px;
 }
