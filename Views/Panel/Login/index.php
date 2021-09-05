@@ -18,20 +18,30 @@
     </head>
     <body>
 
-        <?php
-            if(isset($_SESSION['not_authorized'])):
-        ?>
-                <script>alert('Credenciais incorretas!');</script>
-        <?php
-            endif;
-            unset($_SESSION['not_authorized']);
-        ?>
+        
 
         <div class="div_login_main">
+
             <div class="div_input_forms">
+                <?php
+                    if(isset($_SESSION['not_authorized'])):
+                ?>
+                    <div class="erro_formLogin">
+                        <span class="label02_formLogin">E-mail ou senha inválidos.</span>
+                    </div>
+                <?php
+                    endif;
+                    unset($_SESSION['not_authorized']);
+                ?>
+            
+
                 <div class="div_responsive_input">
+
+
+                
+
                     <form action="../../../Librarys/ValidateLogin.php" method="POST">
-                        <img class="img_logotipo" src="https://i.postimg.cc/d3ZW0LjD/gestor-logo-app.png"/>
+                        <img class="img_logotipo" class="class_input" src="https://i.postimg.cc/d3ZW0LjD/gestor-logo-app.png"/>
                         <input name="cnpj" class="class_input" required="" autofocus="" id="input_responsive" placeholder="Informe o CNPJ" type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="14" data-mask="00.000.000/0000-00"/>
                         <input name="username" class="class_input" required="" placeholder="Informe o Nome de Usuário" type="text" />
                         <input name="password" class="class_input" required="" placeholder="Informe a Senha" type="password" />    

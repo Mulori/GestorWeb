@@ -16,8 +16,6 @@ $result = pg_query($bdconexao, $ssql);
 $row = pg_num_rows($result);
 
 if ($row > 0) {
-    
-    $usuario_bd = pg_fetch_assoc($result);
     $_SESSION['user_username'] = $username;
     header('location: ../Views/Panel/');
     exit();

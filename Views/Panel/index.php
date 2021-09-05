@@ -1,9 +1,12 @@
+
 <?php 
-    session_start();
     include('../../Librarys/VerifyLogin.php');
+    include('../../Librarys/Connection.php');
 ?>
 
+
 <!DOCTYPE html>
+
 <html>
     <head>
         <title>GW | RCR Sistemas</title>
